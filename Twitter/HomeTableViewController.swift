@@ -21,6 +21,7 @@ class HomeTableViewController: UITableViewController {
         loadTweet()
         myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        
     }
     
     @objc func loadTweet() {
@@ -29,7 +30,7 @@ class HomeTableViewController: UITableViewController {
         numberOfTweet = 20
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count": numberOfTweet]
-        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success: {(tweets: [NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary]) in
             self.tweetArray.removeAll()
             for tweet in tweets {
                 
@@ -50,7 +51,7 @@ class HomeTableViewController: UITableViewController {
       let myURL =  "https://api.twitter.com/1.1/statuses/home_timeline.json"
         numberOfTweet = numberOfTweet + 20
         let myParams = ["count": numberOfTweet]
-        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams, success: {(tweets: [NSDictionary]) in
+        TwitterAPICaller.client?.getDictionariesRequest(url: myURL, parameters: myParams as [String : Any], success: {(tweets: [NSDictionary]) in
             self.tweetArray.removeAll()
             for tweet in tweets {
                 
