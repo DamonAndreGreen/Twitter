@@ -9,7 +9,7 @@ User stays logged in across restarts.
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/UUn3tZH9o3iw1lcMEO/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 User can compose a tweet. 
 User can favorite a tweet. 
